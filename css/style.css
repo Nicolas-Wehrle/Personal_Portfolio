@@ -8,6 +8,7 @@ html {
     scrollbar-color: #444444 var(--dark);
     scrollbar-width: thin;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +53,7 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: var(--dark);
+    overflow-x: hidden;
     overflow-x: clip;
 }
 
@@ -347,7 +349,7 @@ nav {
 #projects .works-toggle {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     max-width: 30rem;
     margin: 1.75rem 0 3rem;
@@ -774,7 +776,18 @@ section:not(#home).in-view {
     }
 
     #projects .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #projects .project-footer {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+    }
+
+    #projects .project-lang {
+        flex-basis: 100%;
+        white-space: normal;
+        text-align: center;
     }
 }
 
