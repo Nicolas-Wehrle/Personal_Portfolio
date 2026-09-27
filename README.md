@@ -2,7 +2,7 @@
 
 ![Portfolio banner](img/projects/dev/Portfolio_banner.png)
 
-My personal portfolio site — built from scratch with plain HTML, CSS and a bit of JavaScript. Includes an about section, a works section (split into Software Development and Cinematography, with a little toggle to switch between them), and a contact section, all with a full EN/DE language switch.
+My personal portfolio site, built from scratch with plain HTML, CSS and a bit of JavaScript. Includes an about section, a works section (split into Software Development and Cinematography, with a little toggle to switch between them), and a contact section, all with a full EN/DE language switch.
 
 ## Features
 
@@ -13,7 +13,7 @@ My personal portfolio site — built from scratch with plain HTML, CSS and a bit
 
 ## Tech
 
-No build tools or frameworks — just static HTML, CSS and vanilla JavaScript.
+No build tools or frameworks, just static HTML, CSS and vanilla JavaScript.
 
 ## Running locally
 
