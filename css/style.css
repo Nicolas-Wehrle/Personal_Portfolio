@@ -764,6 +764,15 @@ section:not(#home).in-view {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        padding: 0.75rem 1.25rem;
+        row-gap: 0.4rem;
+    }
+
+    /* longer translated nav labels (e.g. German) need a bit more room to
+       stay on one line with the language toggle before wrapping */
+    .sticky-bar ul {
+        gap: 0.5rem 1rem;
+        font-size: clamp(0.8rem, 2.6vw, 1rem);
     }
 
     #projects .works-toggle {
