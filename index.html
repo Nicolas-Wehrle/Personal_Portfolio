@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Severin Wehrle - Portfolio.">
+	<link rel="icon" type="image/png" href="img/isoform-logo.png">
+	<title>Severin Wehrle Portfolio</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
+    <nav class="sticky-bar">
+    <a href="#home" class="sticky-bar-title">
+        <h1>Portfolio - Severin Wehrle</h1>
+        <span class="tap-target" aria-hidden="true"></span>
+    </a>
+
+    <ul>
+        <li><a href="#home" data-en="Home" data-de="Startseite">Home<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="#about" data-en="About" data-de="Über mich">About<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="#projects" data-en="Works" data-de="Projekte">Works<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact<span class="tap-target" aria-hidden="true"></span></a></li>
+    </ul>
+
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language" data-en="EN" data-de="DE">EN</button>
+</nav>
+
+<section id="home">
+    <div class="hero-row">
+    <div class="home-text">
+    <p class="greeting" data-en="Hello, I am" data-de="Hallo, ich bin">Hello, I am</p>
+    <h1>Severin Wehrle</h1>
+    <h2 class="subtitle" data-en="Software Developer &amp; Cinematographer" data-de="Applikationsentwickler &amp; Filmmacher">Software Developer &amp; Cinematographer</h2>
+    </div>
+    <img id="img" src="img/isoform-logo.png" alt="Logo">
+    </div>
+</section>
+
+<section id="about">
+    <div class="about-content">
+        <p class="eyebrow" data-en="About" data-de="Über mich">About</p>
+        <h2 class="about-title" data-en="A bit about me" data-de="Etwas über mich">A bit about me</h2>
+        <div class="about-body">
+        <p data-en="Hey! I’m an 17-year-old software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects." data-de="Hey! Ich bin ein 17-jähriger Software-Entwickler und arbeite super gerne an kreativen und praktischen Software-Projekten. Richtig viel Erfahrung hab ich leider noch nicht, aber ein paar Sachen hab ich doch schon auf die Beine gestellt: diese Website hier, ein paar kleine Python-Tools und noch das ein oder andere Projekt nebenbei.">Hey! I’m an 17-year-old software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects.</p>
+        <p data-en="What I enjoy most about programming is definitely the creative side of it, taking an idea and turning it into something that actually works. That’s a big part of why I’m looking to keep developing my skills and take on more projects." data-de="Am liebsten mag ich daran die kreative Seite: aus einer Idee wird plötzlich etwas, das tatsächlich funktioniert. Genau deswegen will ich auch dranbleiben, meine Skills weiter ausbauen und mir immer wieder neue Projekte vornehmen.">What I enjoy most about programming is definitely the creative side of it, taking an idea and turning it into something that actually works. That’s a big part of why I’m looking to keep developing my skills and take on more projects.</p>
+        <p data-en="Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics which is basically just a short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere." data-de="Neben dem Programmieren bin ich ausserdem ziemlich ins Filmmachen vernarrt. Am liebsten dreh ich Cinematics: kurze Clips aus Videospielen, die ich filmisch in Szene setze, um damit eine Geschichte zu erzählen oder einfach eine bestimmte Stimmung einzufangen.">Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics which is basically just a short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="projects-content">
+        <p class="eyebrow" data-en="Works" data-de="Projekte">Works</p>
+        <h2 class="projects-title" data-en="Some of my projects" data-de="Einige meiner Projekte">Some of my projects</h2>
+
+        <!-- dev/cinematography category switch -->
+        <div class="works-toggle" data-active="dev">
+            <button type="button" class="works-toggle-btn is-active" data-category="dev" aria-selected="true" data-en="Software Development" data-de="Softwareentwicklung">Software Development<span class="tap-target" aria-hidden="true"></span></button>
+            <button type="button" class="works-toggle-btn" data-category="cinematography" aria-selected="false" data-en="Cinematography" data-de="Filmmachen">Cinematography<span class="tap-target" aria-hidden="true"></span></button>
+            <span class="works-toggle-thumb" aria-hidden="true"></span>
+        </div>
+
+        <div class="projects-body">
+            <!-- project cards, grouped by category -->
+            <div class="projects-grid" data-category="dev">
+                <div class="project-card">
+                    <img src="img/projects/dev/Modrinth_Studio_banner.png" alt="Modrinth Studio Logo" onerror="this.style.visibility='hidden'">
+                    <h3>Modrinth Studios</h3>
+                    <p data-en="A fork of the Modrinth launcher that I made because I wanted something a little more customizable. I removed the ads, added a bunch of customization options, and changed a few things to make it fit better with how I use the launcher." data-de="Ein Fork des Modrinth-Launchers, den ich gemacht habe, weil ich mir etwas mehr Anpassungsmöglichkeiten gewünscht habe. Ich hab die Werbung entfernt, jede Menge Optionen zum Anpassen hinzugefügt und ein paar Sachen so geändert, dass sie besser zu meiner Nutzung passen.">A fork of the Modrinth launcher that I made because I wanted something a little more customizable. I removed the ads, added a bunch of customization options, and changed a few things to make it fit better with how I use the launcher.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Tigrolino/modrinth-studios" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Rust · TypeScript · Vue</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/dev/Helixnotes_live_banner.png" alt="Helixnotes-Live Logo" onerror="this.style.visibility='hidden'">
+                    <h3>Helixnotes-Live</h3>
+                    <p data-en="A small fork of Helixnotes that I made after really liking the original editor. I wanted a way to work on the same notebook with a friend in real time, so I added live collaboration to it." data-de="Ein kleiner Fork von Helixnotes, weil mir der ursprüngliche Editor richtig gut gefallen hat. Ich wollte mit einem Freund in Echtzeit am selben Notizbuch arbeiten können, also hab ich Live-Zusammenarbeit eingebaut.">A small fork of Helixnotes that I made after really liking the original editor. I wanted a way to work on the same notebook with a friend in real time, so I added live collaboration to it.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Tigrolino/Helixnotes-Live" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Rust · TypeScript · Svelte</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/dev/Portfolio_banner.png" alt="Portfolio Logo" onerror="this.style.visibility='hidden'">
+                    <h3>Portfolio</h3>
+                    <p data-en="The website you’re looking at right now. I built it from scratch with plain HTML, CSS and a bit of JavaScript, with the goal of keeping it simple while still making it feel like my own." data-de="Die Website, die du dir gerade anschaust. Ich hab sie von Grund auf mit reinem HTML, CSS und etwas JavaScript gebaut, mit dem Ziel, sie einfach zu halten und trotzdem meinen eigenen Stil reinzubringen.">The website you’re looking at right now. I built it from scratch with plain HTML, CSS and a bit of JavaScript, with the goal of keeping it simple while still making it feel like my own.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Nicolas-Wehrle/Personal_Portfolio" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">HTML · CSS · JS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/dev/final-station-banner.jpg" alt="Minecraft Server Development Logo" onerror="this.style.visibility='hidden'">
+                    <h3>Minecraft Server Development</h3>
+                    <p data-en="A bunch of development I’ve done for a Minecraft SMP I work on. This includes Skript, Datapacks and Resourcepacks, ranging from a creative planning world and custom items to crafting recipes and various smaller quality-of-life features." data-de="Einiges an Entwicklung für ein Minecraft-SMP, an dem ich mitarbeite. Dazu gehören Skript, Datapacks und Resourcepacks, von einer kreativen Planungswelt über eigene Items bis hin zu Crafting-Rezepten und ein paar kleineren Quality-of-Life-Sachen.">A bunch of development I’ve done for a Minecraft SMP I work on. This includes Skript, Datapacks and Resourcepacks, ranging from a creative planning world and custom items to crafting recipes and various smaller quality-of-life features.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Tigrolino/Final-Station" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Skript · Datapack · Resourcepack</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/dev/Litematica_banner.png" alt="Litematica Logo" onerror="this.style.visibility='hidden'">
+                    <h3>Litematica Material-List Viewer</h3>
+                    <p data-en="A small Python project I made because I wanted to make building from Litematica schematics a little easier. It turns a material list into an interactive shopping list where you can simply check off the materials as you get them." data-de="Ein kleines Python-Projekt, das ich gemacht habe, weil mir das Bauen nach Litematica-Schematics etwas leichter fallen sollte. Es macht aus einer Materialliste eine interaktive Einkaufsliste, auf der du die Materialien einfach abhaken kannst, sobald du sie hast.">A small Python project I made because I wanted to make building from Litematica schematics a little easier. It turns a material list into an interactive shopping list where you can simply check off the materials as you get them.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Tigrolino/litematica-material-helper" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Python</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/dev/youtube_downloader_banner.png" alt="Youtube Downloader Logo" onerror="this.style.visibility='hidden'">
+                    <h3>YouTube Downloader</h3>
+                    <p data-en="A small Python project I made as a simple way to download YouTube videos or audio. It uses yt-dlp and has a simple Tkinter interface with live progress and a folder picker." data-de="Ein kleines Python-Projekt für eine einfache Möglichkeit, YouTube-Videos oder nur den Ton herunterzuladen. Es nutzt yt-dlp und hat eine simple Tkinter-Oberfläche mit Live-Fortschrittsanzeige und Ordnerauswahl.">A small Python project I made as a simple way to download YouTube videos or audio. It uses yt-dlp and has a simple Tkinter interface with live progress and a folder picker.</p>
+                    <div class="project-footer">
+                                        <a href="https://github.com/Tigrolino/Youtube-Downloader" target="_blank" rel="noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid is-hidden" data-category="cinematography">
+                <div class="project-card">
+                    <img src="img/projects/cinema/a-train-to-yesterday-banner.png" alt="A Train to Yesterday Banner" onerror="this.style.visibility='hidden'">
+                    <h3>A Train to Yesterday</h3>
+                    <p data-en="A project I made for school. Premiere Pro did most of the heavy lifting here, mainly because of the amount of filmmaking tricks I used. This is also the longest cinematic I’ve made so far." data-de="Ein Projekt für die Schule. Den Grossteil der Arbeit hat hier Premiere Pro übernommen, vor allem wegen der ganzen Filmtricks, die ich eingebaut habe. Ausserdem ist das bis jetzt mein längstes Cinematic.">A project I made for school. Premiere Pro did most of the heavy lifting here, mainly because of the amount of filmmaking tricks I used. This is also the longest cinematic I’ve made so far.</p>
+                    <div class="project-footer">
+                                        <a href="https://www.youtube.com/watch?v=mZZh2PKNnKI" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Minecraft Cinematic</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/cinema/advertisement-banner.png" alt="Galaxy Watch6 Advertisement Banner" onerror="this.style.visibility='hidden'">
+                    <h3>Galaxy Watch6 Advertisement</h3>
+                    <p data-en="A Blender animation for an advertisement we had to make in school. Again, there was a lot of editing done in Premiere Pro, but I also had to use Blender for the first time, which was a pretty new experience for me." data-de="Eine Blender-Animation für eine Werbung, die wir für die Schule machen mussten. Auch hier ist einiges in Premiere Pro passiert, aber ich musste zum ersten Mal mit Blender arbeiten, was für mich nochmal eine ganz neue Erfahrung war.">A Blender animation for an advertisement we had to make in school. Again, there was a lot of editing done in Premiere Pro, but I also had to use Blender for the first time, which was a pretty new experience for me.</p>
+                    <div class="project-footer">
+                                        <a href="https://www.youtube.com/watch?v=RyvfWaTK93o" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Blender Animation</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/cinema/soulweaver-banner.png" alt="Soulweaver - Goldeagle Musicvideo Banner" onerror="this.style.visibility='hidden'">
+                    <h3>Music Video: Soulweaver - Goldeagle </h3>
+                    <p data-en="A little cinematic I made for a friend back then, to showcase the really nice song he made for his Minecraft mod, which adds a bunch of music to the game." data-de="Ein kleines Cinematic, das ich damals für einen Freund gemacht habe, um seinen richtig guten Song zu zeigen, den er für seine Minecraft-Mod geschrieben hat, die eine Menge Musik ins Spiel bringt.">A little cinematic I made for a friend back then, to showcase the really nice song he made for his Minecraft mod, which adds a bunch of music to the game.</p>
+                    <div class="project-footer">
+                                        <a href="https://www.youtube.com/watch?v=dWaN15w6sZo" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Minecraft Cinematic</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/cinema/forest_banner.png" alt="Forest Banner" onerror="this.style.visibility='hidden'">
+                    <h3>Forest</h3>
+                    <p data-en="One of the first cinematics I made. I started making it pretty much out of the blue, and I don’t even really remember making it anymore. I still really like it to this day, though." data-de="Eines meiner ersten Cinematics. Ich hab einfach so angefangen, es zu machen, und kann mich ehrlich gesagt kaum noch daran erinnern, wie es entstanden ist. Trotzdem mag ich es bis heute richtig gerne.">One of the first cinematics I made. I started making it pretty much out of the blue, and I don’t even really remember making it anymore. I still really like it to this day, though.</p>
+                    <div class="project-footer">
+                                        <a href="https://www.youtube.com/watch?v=NDcb5kQOQ00" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Minecraft Cinematic</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/cinema/I-Entered-a-World-Lost-to-Time-Banner.png" alt="I Entered a World Lost to Time Banner" onerror="this.style.visibility='hidden'">
+                    <h3>I Entered a World Lost to Time</h3>
+                    <p data-en="Quite a large project I did with a friend of mine. We made it to showcase a pretty large roleplay server. I mainly worked on the sound design, but I also co-directed the entire thing." data-de="Ein ziemlich grosses Projekt, das ich zusammen mit einem Freund umgesetzt habe. Damit wollten wir einen ziemlich grossen Roleplay-Server zeigen. Ich hab vor allem am Sounddesign gearbeitet, aber auch bei der Regie mitgemacht.">Quite a large project I did with a friend of mine. We made it to showcase a pretty large roleplay server. I mainly worked on the sound design, but I also co-directed the entire thing.</p>
+                    <div class="project-footer">
+                                        <a href="https://www.youtube.com/watch?v=65bB1fDl7TU" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Sound design</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/projects/cinema/portal_banner.png" alt="Portal Banner" onerror="this.style.visibility='hidden'">
+                    <h3>Portal</h3>
+                    <p data-en="This was mainly a test to see if a “void” effect was possible, but it turned out really nice. I still think it’s one of the best cinematics I’ve made." data-de="Eigentlich nur ein Test, ob sich ein „Void“-Effekt umsetzen lässt, aber am Ende ist richtig was Gutes dabei rausgekommen. Ich finde immer noch, dass es eines meiner besten Cinematics ist.">This was mainly a test to see if a “void” effect was possible, but it turned out really nice. I still think it’s one of the best cinematics I’ve made.</p>
+                    <div class="project-footer">
+                                        <a href="https://youtu.be/aMN9bXK5tOU" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
+                                        <span class="project-lang">Minecraft Cinematic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-content">
+        <p class="eyebrow" data-en="Contact" data-de="Kontakt">Contact</p>
+        <h2 class="contact-title" data-en="Let’s get in touch" data-de="Schreib mir einfach">Let’s get in touch</h2>
+        <div class="contact-links">
+            <a class="contact-link" href="mailto:Severin.wehrle@bluewin.ch">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">Severin.wehrle@bluewin.ch</span>
+            </a>
+            <button type="button" class="contact-link" id="discord-copy" data-copy="@tigrolino" aria-label="Copy Discord handle">
+                <span class="contact-label">Discord</span>
+                <span class="contact-value">@tigrolino</span>
+            </button>
+            <a class="contact-link" href="https://github.com/Tigrolino" target="_blank" rel="noopener noreferrer">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/Tigrolino</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <p class="footer-left">Portfolio - Severin Wehrle</p>
+        <p class="footer-center">&copy; <span id="footer-year">2026</span> All rights reserved.</p>
+        <div class="footer-right">
+            <a href="https://www.youtube.com/@Tigrolino" target="_blank" rel="noopener noreferrer">YouTube<span class="tap-target" aria-hidden="true"></span></a>
+            <a href="https://github.com/Tigrolino" target="_blank" rel="noopener noreferrer">GitHub<span class="tap-target" aria-hidden="true"></span></a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/lang.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/works.js" defer></script>
+<script src="js/contact.js" defer></script>
+
+<!-- Lenis Smooth Scroll Script -->
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis({
+        duration: 2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Let Lenis handle clicks on in-page anchor links (nav, logo) too,
+    // instead of the browser's own instant/native jump - so every scroll
+    // on the page, wheel or click, uses the same speed and feel.
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: -80 });
+        });
+    });
+
+    // Keep the footer's copyright year current without needing a manual edit.
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

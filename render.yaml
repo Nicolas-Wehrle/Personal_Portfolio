@@ -1,0 +1,15 @@
+# Render Blueprint - lets Render auto-configure this as a static site when
+# you create a service via "New +" -> "Blueprint" and point it at this repo.
+# (You can also skip this file entirely and just create a "Static Site"
+# service manually in the Render dashboard - see the deployment notes.)
+services:
+  - type: web
+    name: portfolio
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
