@@ -601,8 +601,8 @@ nav {
     white-space: nowrap;
 }
 
-/* GitHub card reads as a real button rather than a label/value card */
-#contact .contact-link-github {
+/* GitHub/YouTube cards read as real buttons rather than label/value cards */
+#contact .contact-link-button {
     flex-direction: row;
     gap: 0.6rem;
     background: var(--light);
@@ -612,13 +612,13 @@ nav {
     font-weight: 700;
 }
 
-#contact .contact-link-github:hover,
-#contact .contact-link-github:focus-visible {
+#contact .contact-link-button:hover,
+#contact .contact-link-button:focus-visible {
     background: color-mix(in srgb, var(--light) 85%, transparent);
     border-color: color-mix(in srgb, var(--light) 85%, transparent);
 }
 
-#contact .contact-link-github .github-icon {
+#contact .contact-link-button svg {
     flex-shrink: 0;
 }
 
