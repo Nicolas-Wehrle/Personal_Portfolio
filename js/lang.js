@@ -62,11 +62,7 @@
         const path = qIndex === -1 ? base : base.slice(0, qIndex);
         const query = qIndex === -1 ? '' : base.slice(qIndex + 1);
         const params = new URLSearchParams(query);
-        if (lang === 'de') {
-            params.set('lang', 'de');
-        } else {
-            params.delete('lang');
-        }
+        params.set('lang', lang);
         const qs = params.toString();
         return path + (qs ? '?' + qs : '') + hash;
     }
@@ -77,6 +73,29 @@
             if (!original) return;
             a.setAttribute('href', withLangParam(original, lang));
         });
+    }
+
+    // aria-label mirrors the visible EN/DE text so it satisfies the
+    // "label in name" rule instead of just saying "Switch language".
+    function updateToggleLabel(lang) {
+        toggleBtn.setAttribute('aria-label', lang === 'de'
+            ? 'DE – zu Englisch wechseln'
+            : 'EN – switch to German');
+    }
+
+    // meta description isn't a text node, so it can't go through
+    // applyText - it has its own data-desc-en/data-desc-de attributes.
+    function updateMetaDescription(lang) {
+        const meta = document.querySelector('meta[name="description"]');
+        if (!meta || !meta.dataset.descEn) return;
+        meta.setAttribute('content', lang === 'de' ? meta.dataset.descDe : meta.dataset.descEn);
+    }
+
+    function applyLangSideEffects(lang) {
+        document.documentElement.lang = lang;
+        updateLangLinks(lang);
+        updateToggleLabel(lang);
+        updateMetaDescription(lang);
     }
 
     function swapTimeFor(el) {
@@ -179,12 +198,11 @@
         if (animating) return;
 
         const nextLang = currentLang === 'en' ? 'de' : 'en';
+        currentLang = nextLang;
+        applyLangSideEffects(nextLang);
 
         if (prefersReducedMotion) {
             setLanguageInstant(nextLang);
-            currentLang = nextLang;
-            document.documentElement.lang = nextLang;
-            updateLangLinks(nextLang);
             return;
         }
 
@@ -201,9 +219,6 @@
 
         const totalDuration = (translatable.length - 1) * WAVE_STEP + ANIM_DURATION;
         setTimeout(() => {
-            currentLang = nextLang;
-            document.documentElement.lang = nextLang;
-            updateLangLinks(nextLang);
             animating = false;
         }, totalDuration);
     }
@@ -220,9 +235,8 @@
     if (initialLang !== currentLang) {
         setLanguageInstant(initialLang);
         currentLang = initialLang;
-        document.documentElement.lang = initialLang;
     }
-    updateLangLinks(currentLang);
+    applyLangSideEffects(currentLang);
 
     toggleBtn.addEventListener('click', toggleLanguage);
 })();

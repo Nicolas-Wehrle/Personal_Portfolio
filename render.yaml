@@ -5,3 +5,32 @@ services:
     buildCommand: ""
     staticPublishPath: .
     pullRequestPreviewsEnabled: false
+    headers:
+      # css/js are always loaded with a ?v=N query string (bumped on every
+      # change), so it's safe to cache them for a long time.
+      - path: /css/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /js/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      # img/* isn't version-tagged, so a shorter cache avoids a swapped
+      # banner staying stale in visitors' browsers for too long.
+      - path: /img/*
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=31536000; includeSubDomains
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"

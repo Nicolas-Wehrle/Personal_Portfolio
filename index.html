@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<script>document.documentElement.classList.add('js');</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Severin Wehrle - Portfolio. Software developer &amp; cinematographer.">
+	<meta name="description" content="Severin Wehrle - Portfolio. Software developer &amp; cinematographer." data-desc-en="Severin Wehrle - Portfolio. Software developer &amp; cinematographer." data-desc-de="Severin Wehrle - Portfolio. Softwareentwickler &amp; Filmemacher.">
 	<link rel="canonical" href="https://severinwehrle.dev/">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<title>Severin Wehrle Portfolio</title>
+	<title data-en="Severin Wehrle Portfolio" data-de="Severin Wehrle Portfolio">Severin Wehrle Portfolio</title>
 
 	<!-- Open Graph / Twitter Card -->
 	<meta property="og:type" content="website">
@@ -41,33 +41,33 @@
         <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact<span class="tap-target" aria-hidden="true"></span></a></li>
     </ul>
 
-    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language" data-en="EN" data-de="DE">EN</button>
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="EN – switch to German" data-en="EN" data-de="DE">EN</button>
 </nav>
 
-<section id="home">
+<section id="home" tabindex="-1">
     <div class="hero-row">
     <div class="home-text">
     <p class="greeting" data-en="Hello, I am" data-de="Hallo, ich bin">Hello, I am</p>
     <h1>Severin Wehrle</h1>
     <h2 class="subtitle" data-en="Software Developer &amp; Cinematographer" data-de="Applikationsentwickler &amp; Filmemacher">Software Developer &amp; Cinematographer</h2>
     </div>
-    <img id="img" src="img/isoform-logo.png" alt="Logo">
+    <img id="img" src="img/isoform-logo-hero.webp" width="800" height="800" alt="Logo">
     </div>
 </section>
 
-<section id="about">
+<section id="about" tabindex="-1">
     <div class="about-content">
         <p class="eyebrow" data-en="About" data-de="Über mich">About</p>
         <h2 class="about-title" data-en="A bit about me" data-de="Etwas über mich">A bit about me</h2>
         <div class="about-body">
-        <p data-en="Hey! I’m a 17-year-old software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects." data-de="Ich bin ein 17-jähriger Software-Entwickler und arbeite gerne an nützlichen und kreativen Software-Projekten. Richtig viel Erfahrung hab ich noch nicht, aber ein paar Sachen hab ich doch schon umgesetzt: zum Beispiel diese Website hier, ein paar kleine Python-Tools und einige andere Projekte.">Hey! I’m a 17-year-old software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects.</p>
+        <p data-en="Hey! I’m a software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects." data-de="Ich bin Software-Entwickler und arbeite gerne an nützlichen und kreativen Software-Projekten. Richtig viel Erfahrung hab ich noch nicht, aber ein paar Sachen hab ich doch schon umgesetzt: zum Beispiel diese Website hier, ein paar kleine Python-Tools und einige andere Projekte.">Hey! I’m a software developer with a strong interest in building creative and practical projects. While I’m still growing my experience in software development, I’ve already worked on projects ranging from this website and small Python applications to various other personal projects.</p>
         <p data-en="What I enjoy most about programming is definitely the creative side of it, taking an idea and turning it into something that actually works. That’s a big part of why I’m looking to keep developing my skills and take on more projects." data-de="Am liebsten mag ich daran die kreative Seite: aus einer Idee wird plötzlich etwas, das tatsächlich funktioniert. Genau deswegen will ich auch dranbleiben, meine Programmierkenntnisse weiter entwickeln und mich mit neuen Projekten auseinandersetzen.">What I enjoy most about programming is definitely the creative side of it, taking an idea and turning it into something that actually works. That’s a big part of why I’m looking to keep developing my skills and take on more projects.</p>
-        <p data-en="Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics which is basically just short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere." data-de="Neben dem Programmieren bin ich ausserdem ziemlich vom Filmemachen begeistert. Am liebsten drehe ich Cinematics: kurze Clips, die ich filmisch in Szene setze, um damit eine Geschichte zu erzählen oder eine bestimmte Stimmung zu erzeugen.">Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics which is basically just short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere.</p>
+        <p data-en="Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics, which are short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere." data-de="Neben dem Programmieren bin ich ausserdem ziemlich vom Filmemachen begeistert. Am liebsten drehe ich Cinematics: kurze Clips, die ich filmisch in Szene setze, um damit eine Geschichte zu erzählen oder eine bestimmte Stimmung zu erzeugen.">Alongside programming, I’m also passionate about cinematography. In particular, I enjoy creating cinematics, which are short sequences of clips recorded inside video games and presented with a cinematic approach to tell a story or create an atmosphere.</p>
         </div>
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" tabindex="-1">
     <div class="projects-content">
         <p class="eyebrow" data-en="Works" data-de="Projekte">Works</p>
         <h2 class="projects-title" data-en="Some of my projects" data-de="Einige meiner Projekte">Some of my projects</h2>
@@ -83,8 +83,8 @@
             <!-- project cards, grouped by category -->
             <div class="projects-grid" data-category="dev">
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/Modrinth_Studio_banner.jpg" alt="Modrinth Studio Logo" onerror="this.style.visibility='hidden'">
-                    <h3>Modrinth Studios</h3>
+                    <img loading="lazy" src="img/projects/dev/Modrinth_Studio_banner.jpg" alt="" onerror="this.style.visibility='hidden'">
+                    <h3>Modrinth Studio</h3>
                     <p data-en="A fork of the Modrinth launcher that I made because I wanted a bit more customization. I removed the ads, added a bunch of customization options, and changed a few things to better fit the way I use the launcher." data-de="Ein Fork des Modrinth-Launchers, den ich gemacht habe, weil ich mir etwas mehr Anpassungsmöglichkeiten gewünscht habe. Ich habe die Werbung entfernt, verschiedene Anpassungsoptionen hinzugefügt und ein paar Dinge so verändert, dass der Launcher besser zu meiner Nutzung passt.">A fork of the Modrinth launcher that I made because I wanted a bit more customization. I removed the ads, added a bunch of customization options, and changed a few things to better fit the way I use the launcher.</p>
                     <div class="project-footer">
                                         <a href="https://github.com/Tigrolino/modrinth-studios" target="_blank" rel="nofollow noopener noreferrer" data-en="View on GitHub" data-de="Auf GitHub ansehen">View on GitHub<span class="tap-target" aria-hidden="true"></span></a>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/Helixnotes_live_banner.png" alt="Helixnotes-Live Logo" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/dev/Helixnotes_live_banner.png" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Helixnotes-Live</h3>
                     <p data-en="A small fork of Helixnotes that I made after really liking the original editor. I wanted to be able to work on the same notebook with a friend in real time, so I added live collaboration." data-de="Ein kleiner Fork von Helixnotes, den ich gemacht habe, nachdem mir der ursprüngliche Editor richtig gut gefallen hat. Ich wollte mit einem Freund in Echtzeit am selben Notizbuch arbeiten können, also habe ich eine Live-Zusammenarbeit eingebaut.">A small fork of Helixnotes that I made after really liking the original editor. I wanted to be able to work on the same notebook with a friend in real time, so I added live collaboration.</p>
                     <div class="project-footer">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/Portfolio_banner.png" alt="Portfolio Logo" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/dev/Portfolio_banner.png" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Portfolio</h3>
                     <p data-en="The website you’re looking at right now. I built it from scratch using plain HTML, CSS and a bit of JavaScript. The goal was to keep it simple while still making it feel like my own." data-de="Die Website, die du gerade anschaust. Ich habe sie von Grund auf mit HTML, CSS und etwas JavaScript gebaut. Dabei wollte ich sie bewusst einfach halten und trotzdem meinen eigenen Stil einbringen.">The website you’re looking at right now. I built it from scratch using plain HTML, CSS and a bit of JavaScript. The goal was to keep it simple while still making it feel like my own.</p>
                     <div class="project-footer">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/final-station-banner.jpg" alt="Minecraft Server Development Logo" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/dev/final-station-banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Minecraft Server Development</h3>
                     <p data-en="A collection of development work I’ve done for a Minecraft SMP I work on. This includes Skript, Datapacks and Resourcepacks, ranging from a creative planning world and custom items to crafting recipes and various smaller quality-of-life features." data-de="Eine Sammlung von Entwicklungsarbeiten für einen Minecraft-Server, an dem ich mitarbeite. Dazu gehören Skript, Datapacks und Resourcepacks, von einer kreativen Planungswelt und eigenen Gegenständen bis hin zu Crafting-Rezepten und verschiedenen kleineren Quality-of-Life-Features.">A collection of development work I’ve done for a Minecraft SMP I work on. This includes Skript, Datapacks and Resourcepacks, ranging from a creative planning world and custom items to crafting recipes and various smaller quality-of-life features.</p>
                     <div class="project-footer">
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/Litematica_banner.png" alt="Litematica Logo" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/dev/Litematica_banner.png" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Litematica Material-List Viewer</h3>
                     <p data-en="A small Python project I made to make building from Litematica schematics a little easier. It turns a material list into an interactive shopping list where you can simply check off each material as you get it." data-de="Ein kleines Python-Projekt, das ich gemacht habe, um das Bauen mit Litematica-Schematics etwas einfacher zu machen. Es verwandelt eine Materialliste in eine interaktive Einkaufsliste, auf der du die einzelnen Materialien einfach abhaken kannst, sobald du sie hast.">A small Python project I made to make building from Litematica schematics a little easier. It turns a material list into an interactive shopping list where you can simply check off each material as you get it.</p>
                     <div class="project-footer">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/dev/youtube_downloader_banner.png" alt="Youtube Downloader Logo" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/dev/youtube_downloader_banner.png" alt="" onerror="this.style.visibility='hidden'">
                     <h3>YouTube Downloader</h3>
                     <p data-en="A small Python project I made as a simple way to download YouTube videos or audio. It uses yt-dlp and has a simple Tkinter interface with live progress and a folder picker." data-de="Ein kleines Python-Projekt, das ich als einfache Möglichkeit zum Herunterladen von YouTube-Videos oder Audio gemacht habe. Es nutzt yt-dlp und hat eine einfache Tkinter-Oberfläche mit Live-Fortschrittsanzeige und Ordnerauswahl.">A small Python project I made as a simple way to download YouTube videos or audio. It uses yt-dlp and has a simple Tkinter interface with live progress and a folder picker.</p>
                     <div class="project-footer">
@@ -140,16 +140,16 @@
 
             <div class="projects-grid is-hidden" data-category="cinematography">
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/a-train-to-yesterday-banner.jpg" alt="A Train to Yesterday Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/a-train-to-yesterday-banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>A Train to Yesterday</h3>
-                    <p data-en="A project I made for school. Premiere Pro did most of the heavy lifting, mainly because of the amount of filmmaking techniques I used. It’s also the longest cinematic I’ve made so far." data-de="Ein Projekt, das ich für die Schule gemacht habe. Den grössten Teil der Arbeit hab ich dabei in Premiere Pro gemacht, vor allem wegen der vielen Filmtechniken, die ich verwendet habe. Es ist ausserdem das längste Cinematic, das ich bisher gemacht habe.">A project I made for school. Premiere Pro did most of the heavy lifting, mainly because of the amount of filmmaking techniques I used. It’s also the longest cinematic I’ve made so far.</p>
+                    <p data-en="A project I made for school. Premiere Pro did most of the heavy lifting, mainly because of the number of filmmaking techniques I used. It’s also the longest cinematic I’ve made so far." data-de="Ein Projekt, das ich für die Schule gemacht habe. Den grössten Teil der Arbeit hab ich dabei in Premiere Pro gemacht, vor allem wegen der vielen Filmtechniken, die ich verwendet habe. Es ist ausserdem das längste Cinematic, das ich bisher gemacht habe.">A project I made for school. Premiere Pro did most of the heavy lifting, mainly because of the number of filmmaking techniques I used. It’s also the longest cinematic I’ve made so far.</p>
                     <div class="project-footer">
                                         <a href="https://www.youtube.com/watch?v=mZZh2PKNnKI" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube" data-de="Auf YouTube ansehen">Watch on YouTube<span class="tap-target" aria-hidden="true"></span></a>
                                         <span class="project-lang">Minecraft Cinematic</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/advertisement-banner.jpg" alt="Galaxy Watch6 Advertisement Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/advertisement-banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Galaxy Watch6 Advertisement</h3>
                     <p data-en="A Blender animation for an advertisement we had to make at school. I did a lot of the editing in Premiere Pro, but I also had to use Blender for the first time, which was a completely new experience for me." data-de="Eine Blender-Animation für eine Werbung, die wir für die Schule machen mussten. Einen grossen Teil des Schnitts habe ich in Premiere Pro gemacht, musste dafür aber auch zum ersten Mal mit Blender arbeiten, was für mich eine komplett neue Erfahrung war.">A Blender animation for an advertisement we had to make at school. I did a lot of the editing in Premiere Pro, but I also had to use Blender for the first time, which was a completely new experience for me.</p>
                     <div class="project-footer">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/soulweaver-banner.jpg" alt="Soulweaver - Goldeagle Musicvideo Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/soulweaver-banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Music Video: Soulweaver - Goldeagle</h3>
                     <p data-en="A little cinematic I made for a friend to showcase a song he made for his Minecraft mod, which adds a bunch of music to the game." data-de="Ein kleines Cinematic, das ich für das Lied eines Freundes gemacht habe, das er für seine Minecraft-Mod komponiert hat. Die Mod fügt dem Spiel eine ganze Menge Musik hinzu.">A little cinematic I made for a friend to showcase a song he made for his Minecraft mod, which adds a bunch of music to the game.</p>
                     <div class="project-footer">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/forest_banner.jpg" alt="Forest Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/forest_banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Forest</h3>
                     <p data-en="One of the first cinematics I made. I started working on it pretty much out of nowhere, and I honestly don’t remember much about how it came together. I still really like it, though." data-de="Eines meiner ersten Cinematics. Ich habe ziemlich spontan damit angefangen und kann mich ehrlich gesagt kaum noch daran erinnern, wie es entstanden ist. Trotzdem mag ich es bis heute richtig gerne.">One of the first cinematics I made. I started working on it pretty much out of nowhere, and I honestly don’t remember much about how it came together. I still really like it, though.</p>
                     <div class="project-footer">
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/I-Entered-a-World-Lost-to-Time-Banner.jpg" alt="I Entered a World Lost to Time Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/I-Entered-a-World-Lost-to-Time-Banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>I Entered a World Lost to Time</h3>
                     <p data-en="A fairly large project I made with a friend to showcase a roleplay server. I mainly worked on the sound design, but I also co-directed the entire project." data-de="Ein ziemlich grosses Projekt, das ich zusammen mit einem Freund gemacht habe, um einen Roleplay-Server zu zeigen. Ich habe hauptsächlich am Sounddesign gearbeitet, aber auch bei der Regie des gesamten Projekts mitgewirkt.">A fairly large project I made with a friend to showcase a roleplay server. I mainly worked on the sound design, but I also co-directed the entire project.</p>
                     <div class="project-footer">
@@ -185,7 +185,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img loading="lazy" src="img/projects/cinema/portal_banner.jpg" alt="Portal Banner" onerror="this.style.visibility='hidden'">
+                    <img loading="lazy" src="img/projects/cinema/portal_banner.jpg" alt="" onerror="this.style.visibility='hidden'">
                     <h3>Portal</h3>
                     <p data-en="This started as a test to see if a “void” effect was possible, but it turned out really well. I still think it’s one of the best cinematics I’ve made." data-de="Das Ganze hat als Test angefangen, um zu sehen, ob sich ein „Void“-Effekt umsetzen lässt. Am Ende ist aber richtig etwas Gutes daraus geworden. Ich finde immer noch, dass es eines meiner besten Cinematics ist.">This started as a test to see if a “void” effect was possible, but it turned out really well. I still think it’s one of the best cinematics I’ve made.</p>
                     <div class="project-footer">
@@ -198,13 +198,13 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" tabindex="-1">
     <div class="contact-content">
         <p class="eyebrow" data-en="Contact" data-de="Kontakt">Contact</p>
         <h2 class="contact-title" data-en="Let’s get in touch" data-de="Schreib mir einfach">Let’s get in touch</h2>
         <div class="contact-links">
             <a class="contact-link" href="mailto:severin.wehrle@bluewin.ch">
-                <span class="contact-label">Email</span>
+                <span class="contact-label" data-en="Email" data-de="E-Mail">Email</span>
                 <span class="contact-value">severin.wehrle@bluewin.ch</span>
             </a>
             <a class="contact-link contact-link-button" href="https://github.com/Tigrolino" target="_blank" rel="nofollow noopener noreferrer" data-en="Check out my GitHub" data-de="Mein GitHub ansehen"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>Check out my GitHub<span class="tap-target" aria-hidden="true"></span></a>
@@ -225,7 +225,7 @@
     </div>
 </footer>
 
-<script src="js/lang.js?v=3" defer></script>
+<script src="js/lang.js?v=5" defer></script>
 <script src="js/reveal.js?v=2" defer></script>
 <script src="js/works.js?v=3" defer></script>
 
@@ -247,20 +247,27 @@
         requestAnimationFrame(raf);
     }
 
-    // Let Lenis handle clicks on in-page anchor links (nav, logo) too,
-    // instead of the browser's own instant/native jump - so every scroll
-    // on the page, wheel or click, uses the same speed and feel.
-    // Falls back to scrollIntoView if Lenis isn't running.
+    // Scrolls to a section via Lenis (falls back to scrollIntoView),
+    // moves focus there so keyboard users can tell where they landed,
+    // and updates the URL hash - all three of which e.preventDefault()
+    // below otherwise blocks the browser from doing on its own.
+    function goToSection(section, hash) {
+        if (lenis) {
+            lenis.scrollTo(section, { offset: -80 });
+        } else {
+            section.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
+        section.focus({ preventScroll: true });
+        if (hash) history.pushState(null, '', hash);
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
-            const target = document.querySelector(link.getAttribute('href'));
+            const hash = link.getAttribute('href');
+            const target = document.querySelector(hash);
             if (!target) return;
             e.preventDefault();
-            if (lenis) {
-                lenis.scrollTo(target, { offset: -80 });
-            } else {
-                target.scrollIntoView({ behavior: 'auto', block: 'start' });
-            }
+            goToSection(target, hash);
         });
     });
 
@@ -268,10 +275,11 @@
     const footerYear = document.getElementById('footer-year');
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
-    // Number-key shortcuts: 1-4 jump to a section.
+    // Alt+1-4 jump to a section. Needs a modifier (WCAG 2.1.4) - Ctrl is
+    // out since Ctrl+1-8 already switches browser tabs.
     const sectionShortcuts = { '1': '#home', '2': '#about', '3': '#projects', '4': '#contact' };
     document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+        if (!e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
         const el = e.target;
         if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
 
@@ -281,11 +289,7 @@
         if (!section) return;
 
         e.preventDefault();
-        if (lenis) {
-            lenis.scrollTo(section, { offset: -80 });
-        } else {
-            section.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
+        goToSection(section, hash);
     });
 </script>
 </body>
