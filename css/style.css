@@ -65,6 +65,38 @@ section:focus-visible {
     }
 }
 
+/* page-to-page navigation (Portfolio <-> Legal, the 404 page) fades and
+   settles instead of hard-cutting, in browsers that support cross-
+   document view transitions (Chrome, Edge, Safari - Firefox just keeps
+   its normal instant navigation, no fallback needed). */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+
+    ::view-transition-old(root) {
+        animation: page-out 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    ::view-transition-new(root) {
+        animation: page-in 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+}
+
+@keyframes page-out {
+    to {
+        opacity: 0;
+        translate: 0 -16px;
+    }
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        translate: 0 16px;
+    }
+}
+
 html {
     scrollbar-color: #444444 var(--dark);
     scrollbar-width: thin;
@@ -205,6 +237,10 @@ nav {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 0.75rem;
+    /* same bar on every page - named so a cross-document view transition
+       (see @view-transition above) keeps it anchored in place instead of
+       sliding/fading with the rest of the page */
+    view-transition-name: site-nav;
 }
 
 .sticky-bar .sticky-bar-title {
