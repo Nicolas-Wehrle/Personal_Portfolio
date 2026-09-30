@@ -1,3 +1,10 @@
+/*
+ * Personal Portfolio - severinwehrle.dev
+ * Author: Severin Wehrle (github.com/Tigrolino)
+ * Contact: severin.wehrle@bluewin.ch
+ * License: MIT - see LICENSE in the repo root.
+ */
+
 // Works section category switch (Software Development <-> Cinematography).
 (function () {
     const toggle = document.querySelector('.works-toggle');

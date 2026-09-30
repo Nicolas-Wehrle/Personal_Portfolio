@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Page not found - Severin Wehrle.">
+	<meta name="robots" content="noindex">
+	<link rel="icon" type="image/png" href="img/isoform-logo.png">
+	<title>Page Not Found - Severin Wehrle</title>
+	<link rel="stylesheet" href="css/style.css?v=17">
+</head>
+<body>
+    <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
+    <nav class="sticky-bar">
+    <a href="index.html" class="sticky-bar-title back-link">
+        <span class="back-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
+        <h1 data-en="Return to portfolio" data-de="Zurück zum Portfolio">Return to portfolio</h1>
+        <span class="tap-target" aria-hidden="true"></span>
+    </a>
+
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language" data-en="EN" data-de="DE">EN</button>
+</nav>
+
+<section id="notfound">
+    <div class="notfound-content">
+        <p class="eyebrow" data-en="Error" data-de="Fehler">Error</p>
+        <h2 class="notfound-title">404</h2>
+        <p class="notfound-text" data-en="This page doesn’t exist. It may have been moved, or the link might just be wrong." data-de="Diese Seite gibt es nicht. Sie wurde vielleicht verschoben, oder der Link ist falsch.">This page doesn’t exist. It may have been moved, or the link might just be wrong.</p>
+        <a class="notfound-home" href="index.html" data-en="Back to the homepage" data-de="Zurück zur Startseite">Back to the homepage</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <p class="footer-left">Portfolio - Severin Wehrle</p>
+        <p class="footer-center">&copy; <span id="footer-year">2026</span> All rights reserved.</p>
+        <div class="footer-right">
+            <a href="https://www.youtube.com/@Tigrolino" target="_blank" rel="nofollow noopener noreferrer">YouTube<span class="tap-target" aria-hidden="true"></span></a>
+            <a href="https://github.com/Tigrolino" target="_blank" rel="nofollow noopener noreferrer">GitHub<span class="tap-target" aria-hidden="true"></span></a>
+            <a href="legal.html" data-en="Legal" data-de="Rechtliches">Legal<span class="tap-target" aria-hidden="true"></span></a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/lang.js?v=2" defer></script>
+<script src="js/reveal.js?v=2" defer></script>
+
+<!-- Lenis Smooth Scroll Script -->
+<script src="js/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis({
+        duration: 0.75,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: -80 });
+        });
+    });
+
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

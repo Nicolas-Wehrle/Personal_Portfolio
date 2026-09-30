@@ -1,3 +1,10 @@
+/*
+ * Personal Portfolio - severinwehrle.dev
+ * Author: Severin Wehrle (github.com/Tigrolino)
+ * Contact: severin.wehrle@bluewin.ch
+ * License: MIT - see LICENSE in the repo root.
+ */
+
 // EN/DE language toggle with a staggered "wave" swap animation.
 (function () {
     const toggleBtn = document.getElementById('lang-toggle');

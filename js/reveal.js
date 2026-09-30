@@ -1,3 +1,10 @@
+/*
+ * Personal Portfolio - severinwehrle.dev
+ * Author: Severin Wehrle (github.com/Tigrolino)
+ * Contact: severin.wehrle@bluewin.ch
+ * License: MIT - see LICENSE in the repo root.
+ */
+
 // Fades each non-hero section in the first time it scrolls into view.
 (function () {
     const targets = document.querySelectorAll('section:not(#home)');
