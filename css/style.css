@@ -1,4 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* Inter, self-hosted (was Google Fonts @import - that leaks every
+   visitor's IP to Google on every page load). Only the weights this
+   stylesheet actually uses (300/400/600/700/800), latin subset. */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('fonts/inter-300.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/inter-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/inter-700.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('fonts/inter-800.woff2') format('woff2');
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
