@@ -47,6 +47,13 @@
     outline-offset: 3px;
 }
 
+/* the 4 main sections are focus targets for nav/shortcut jumps (so
+   keyboard users land somewhere announced), not something you tab to -
+   the scroll itself is the feedback, a page-wide outline box isn't */
+section:focus-visible {
+    outline: none;
+}
+
 /* reduced motion: kills CSS transitions/animations. Lenis + the lang
    wave are JS-driven, guarded separately in their own files. */
 @media (prefers-reduced-motion: reduce) {

@@ -24,7 +24,7 @@
 	<meta name="twitter:description" content="Software developer &amp; cinematographer. Projects, works and contact.">
 	<meta name="twitter:image" content="https://severinwehrle.dev/img/isoform-logo.png">
 
-	<link rel="stylesheet" href="css/style.css?v=18">
+	<link rel="stylesheet" href="css/style.css?v=19">
 </head>
 <body>
     <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
@@ -276,14 +276,17 @@
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
     // Alt+1-4 jump to a section. Needs a modifier (WCAG 2.1.4) - Ctrl is
-    // out since Ctrl+1-8 already switches browser tabs.
-    const sectionShortcuts = { '1': '#home', '2': '#about', '3': '#projects', '4': '#contact' };
+    // out since Ctrl+1-8 already switches browser tabs. Matched on e.code,
+    // not e.key: on macOS, Option+1 types "¡" (not "1"), since key
+    // reflects the composed character while code stays physical/layout-
+    // independent.
+    const sectionShortcuts = { Digit1: '#home', Digit2: '#about', Digit3: '#projects', Digit4: '#contact' };
     document.addEventListener('keydown', (e) => {
         if (!e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
         const el = e.target;
         if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
 
-        const hash = sectionShortcuts[e.key];
+        const hash = sectionShortcuts[e.code];
         if (!hash) return;
         const section = document.querySelector(hash);
         if (!section) return;
