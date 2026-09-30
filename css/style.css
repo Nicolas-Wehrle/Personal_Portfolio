@@ -41,13 +41,21 @@
     box-sizing: border-box;
 }
 
-/* keyboard accessibility: visible focus ring everywhere, using the
-   element's own text color so it reads correctly both on the light nav
-   bar and on the dark body background, with no per-component overrides
-   needed. */
+/* visible focus ring, currentColor so it works on light + dark bg */
 :focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
+}
+
+/* reduced motion: kills CSS transitions/animations. Lenis + the lang
+   wave are JS-driven, guarded separately in their own files. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 html {
@@ -204,10 +212,11 @@ nav {
     justify-self: end;
 }
 
-.sticky-bar h1 {
+.sticky-bar .nav-title {
     margin: 0;
     color: var(--dark);
     font-size: var(--fs-nav-title);
+    font-weight: 700;
 }
 
 .sticky-bar ul {
@@ -773,14 +782,15 @@ nav {
     animation: none;
 }
 
-/* scroll-triggered section reveal, see js/reveal.js */
-section:not(#home) {
+/* scroll-triggered section reveal, see js/reveal.js - gated behind .js
+   (see <head>) so content stays visible with no JS */
+.js section:not(#home) {
     opacity: 0;
     translate: 0 55px;
     transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), translate 1.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-section:not(#home).in-view {
+.js section:not(#home).in-view {
     opacity: 1;
     translate: 0 0;
 }

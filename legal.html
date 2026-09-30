@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>document.documentElement.classList.add('js');</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Severin Wehrle - Privacy Policy.">
 	<meta name="robots" content="noindex">
-	<link rel="icon" type="image/png" href="img/isoform-logo.png">
+	<link rel="canonical" href="https://severinwehrle.dev/legal.html">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="shortcut icon" href="/favicon.ico">
 	<title>Legal - Severin Wehrle</title>
-	<link rel="stylesheet" href="css/style.css?v=17">
+	<link rel="stylesheet" href="css/style.css?v=18">
 </head>
 <body>
     <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
     <nav class="sticky-bar">
-    <a href="index.html" class="sticky-bar-title back-link">
+    <a href="index.html" class="sticky-bar-title back-link lang-link">
         <span class="back-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
-        <h1 data-en="Return to portfolio" data-de="Zurück zum Portfolio">Return to portfolio</h1>
+        <span class="nav-title" data-en="Return to portfolio" data-de="Zurück zum Portfolio">Return to portfolio</span>
         <span class="tap-target" aria-hidden="true"></span>
     </a>
 
     <ul>
-        <li><a href="index.html#home" data-en="Home" data-de="Startseite">Home<span class="tap-target" aria-hidden="true"></span></a></li>
-        <li><a href="index.html#about" data-en="About" data-de="Über mich">About<span class="tap-target" aria-hidden="true"></span></a></li>
-        <li><a href="index.html#projects" data-en="Works" data-de="Projekte">Works<span class="tap-target" aria-hidden="true"></span></a></li>
-        <li><a href="index.html#contact" data-en="Contact" data-de="Kontakt">Contact<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="index.html#home" class="lang-link" data-en="Home" data-de="Startseite">Home<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="index.html#about" class="lang-link" data-en="About" data-de="Über mich">About<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="index.html#projects" class="lang-link" data-en="Works" data-de="Projekte">Works<span class="tap-target" aria-hidden="true"></span></a></li>
+        <li><a href="index.html#contact" class="lang-link" data-en="Contact" data-de="Kontakt">Contact<span class="tap-target" aria-hidden="true"></span></a></li>
     </ul>
 
     <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language" data-en="EN" data-de="DE">EN</button>
@@ -31,7 +35,7 @@
 <section id="legal">
     <div class="legal-content">
         <p class="eyebrow" data-en="Legal" data-de="Rechtliches">Legal</p>
-        <h2 class="legal-title" data-en="Privacy Policy" data-de="Datenschutzerklärung">Privacy Policy</h2>
+        <h1 class="legal-title" data-en="Privacy Policy" data-de="Datenschutzerklärung">Privacy Policy</h1>
         <p class="legal-updated" data-en="Last updated: 30 September 2026" data-de="Stand: 30. September 2026">Last updated: 30 September 2026</p>
 
         <div class="legal-body">
@@ -66,40 +70,46 @@
 <footer class="site-footer">
     <div class="site-footer-inner">
         <p class="footer-left">Portfolio - Severin Wehrle</p>
-        <p class="footer-center">&copy; <span id="footer-year">2026</span> All rights reserved.</p>
+        <p class="footer-center">&copy; <span id="footer-year">2026</span> <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></p>
         <div class="footer-right">
             <a href="https://www.youtube.com/@Tigrolino" target="_blank" rel="nofollow noopener noreferrer">YouTube<span class="tap-target" aria-hidden="true"></span></a>
             <a href="https://github.com/Tigrolino" target="_blank" rel="nofollow noopener noreferrer">GitHub<span class="tap-target" aria-hidden="true"></span></a>
-            <a href="legal.html" data-en="Legal" data-de="Rechtliches">Legal<span class="tap-target" aria-hidden="true"></span></a>
+            <a href="legal.html" class="lang-link" data-en="Legal" data-de="Rechtliches">Legal<span class="tap-target" aria-hidden="true"></span></a>
         </div>
     </div>
 </footer>
 
-<script src="js/lang.js?v=2" defer></script>
+<script src="js/lang.js?v=3" defer></script>
 <script src="js/reveal.js?v=2" defer></script>
 
 <!-- Lenis Smooth Scroll Script -->
 <script src="js/lenis.min.js"></script>
 <script>
-    const lenis = new Lenis({
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const lenis = prefersReducedMotion ? null : new Lenis({
         duration: 0.75,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
     });
 
-    function raf(time) {
-        lenis.raf(time);
+    if (lenis) {
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
         requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
 
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
             const target = document.querySelector(link.getAttribute('href'));
             if (!target) return;
             e.preventDefault();
-            lenis.scrollTo(target, { offset: -80 });
+            if (lenis) {
+                lenis.scrollTo(target, { offset: -80 });
+            } else {
+                target.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }
         });
     });
 

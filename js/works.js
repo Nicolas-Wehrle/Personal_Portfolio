@@ -14,8 +14,10 @@
     const grids = Array.from(document.querySelectorAll('.projects-grid'));
     if (buttons.length === 0 || grids.length === 0) return;
 
-    const EXIT_DURATION = 450;
-    const CARD_STEP = 70;
+    // aria-pressed, not aria-selected - these aren't a real ARIA tablist
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const EXIT_DURATION = prefersReducedMotion ? 0 : 450;
+    const CARD_STEP = prefersReducedMotion ? 0 : 70;
 
     let activeCategory = toggle.dataset.active || 'dev';
     let switching = false;
@@ -34,7 +36,7 @@
         buttons.forEach((btn) => {
             const isActive = btn.dataset.category === category;
             btn.classList.toggle('is-active', isActive);
-            btn.setAttribute('aria-selected', String(isActive));
+            btn.setAttribute('aria-pressed', String(isActive));
         });
 
         if (current) {
