@@ -1,7 +1,7 @@
 /*
  * Personal Portfolio - severinwehrle.dev
  * Author: Severin Wehrle (github.com/Tigrolino)
- * Contact: severin.wehrle@bluewin.ch
+ * Contact: info@severinwehrle.dev
  * License: MIT - see LICENSE in the repo root.
  */
 
